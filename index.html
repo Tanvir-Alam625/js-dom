@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS DOM</title>
+</head>
+<body>
+    <main>
+        <section id="blogs">
+            <article class="blog">
+                <h2>My Blogs-1</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi, similique veniam, aut, labore rerum neque quidem adipisci ab assumenda quaerat unde natus fuga asperiores quae pariatur incidunt. Et, exercitationem esse.</p>
+            </article>
+            <article class="blog">
+                <h2>My Blogs-2</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi, similique veniam, aut, labore rerum neque quidem adipisci ab assumenda quaerat unde natus fuga asperiores quae pariatur incidunt. Et, exercitationem esse.</p>
+            </article>
+            <article class="blog">
+                <h2>My Blogs-3</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi, similique veniam, aut, labore rerum neque quidem adipisci ab assumenda quaerat unde natus fuga asperiores quae pariatur incidunt. Et, exercitationem esse.</p>
+            </article>
+            <article class="blog">
+                <h2>My Blogs-4</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi, similique veniam, aut, labore rerum neque quidem adipisci ab assumenda quaerat unde natus fuga asperiores quae pariatur incidunt. Et, exercitationem esse.</p>
+            </article>
+        </section>
+    </main>
+
+    <script>
+        const  blogs = document.getElementById('blogs');
+        const  myBlog = document.getElementsByClassName('blog');
+        blogs.style.border = '2px solid red';
+        blogs.style.borderRadius = '10px';
+        blogs.style.padding  = '10px';
+        
+        const article =  document.createElement('article');
+        article.setAttribute('class', 'blog');
+        article.innerHTML  = `
+        <h2>My Blogs-5</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi, similique veniam, aut, labore rerum neque quidem adipisci ab assumenda quaerat unde natus fuga asperiores quae pariatur incidunt. Et, exercitationem esse.</p>
+    
+        `;
+        blogs.appendChild(article);
+        for(const blog of myBlog){
+            blog.style.borderBottom = '2px dashed green';
+        }
+    </script>
+</body>
+</html>
