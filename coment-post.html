@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comment Post in javascript</title>
+</head>
+<body>
+    <section id="mySection">
+        <h2>Our Comments:</h2>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus totam aliquam velit optio beatae dolorem laudantium, molestias iure sequi nihil illum excepturi, veniam numquam suscipit vel voluptatem tempora non alias.
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus totam aliquam velit optio beatae dolorem laudantium, molestias iure sequi nihil illum excepturi, veniam numquam suscipit vel voluptatem tempora non alias.
+    </p>
+
+    </section>
+        <textarea name="" id="comment" cols="70" rows="6"></textarea><br>
+        <button id="button">Post</button>
+    <script>
+        const commentButton = document.getElementById('button');
+        
+        commentButton.addEventListener('click', function(){
+            const addText = document.createElement('p');
+            const myComment = document.getElementById('comment');
+            const mySection = document.getElementById('mySection');
+            if(myComment.value == ''){
+                alert('please input field set')
+            }
+            addText.innerText = myComment.value;
+            mySection.appendChild(addText);
+            myComment.value = '';
+        })
+    </script>
+
+</body>
+</html>
